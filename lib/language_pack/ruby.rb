@@ -525,12 +525,10 @@ params = CGI.parse(uri.query || "")
   end
 
   def generate_middleman_site
-    if gem_is_bundled("middleman")
-      topic "Building Middleman Site"
-      pipe("env PATH=$PATH bundle exec middleman build 2>&1")
-      unless $? == 0
-        error "Failed to generate site with Middleman"
-      end
+    topic "Building Middleman Site"
+    pipe("env PATH=$PATH bundle exec middleman build 2>&1")
+    unless $? == 0
+      error "Failed to generate site with Middleman"
     end
   end
 end
