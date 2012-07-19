@@ -1,5 +1,4 @@
 ## v1 (2012-07-07)
-
 Add build middleman to standard Heroku Ruby buildpack. Update license and readme.
 
 Also see original [heroku-buildpack-ruby changelog][1]
